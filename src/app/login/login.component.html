@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+    <script src="https://www.gstatic.com/firebasejs/9.6.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.2/firebase-auth.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="row">
+        <div
+          class="col-md-8 d-none d-md-block right-background"
+          style="
+            background-image: linear-gradient(
+                rgba(0, 0, 0, 0.5),
+                rgba(0, 0, 0, 0.5)
+              ),
+              url('/assets/backgrounds/white-headphones.png');
+            background-size: cover;
+            height: 100vh;
+          "
+        >
+          <div class="d-flex align-items-center" style="float: left">
+            <img
+              src="assets/images/icon.png"
+              alt="logo"
+              class="mx-auto d-block"
+              style="width: 60px; height: 60px; margin: 20px"
+            />
+            <h1 class="text-white" style="margin: 20px">Welcome to The 80's</h1>
+          </div>
+
+          <div
+            class="container d-flex justify-content-center vh-100"
+            style="margin: 70px"
+          >
+            <div class="swiper-container">
+              <h6 class="text-white">
+                If you do not have a registered email on our website we will
+                send you a verification code to validate it, if you have already
+                logged in before we will take you to Home.
+              </h6>
+
+              <br /><br />
+
+              <h6 class="text-white">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+                in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+                nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+                sunt in culpa qui officia deserunt mollit anim id est laborum.
+              </h6>
+            </div>
+
+            <div class="text-white px-3 py-4 p-md-5 mx-md-4rounded"></div>
+          </div>
+        </div>
+        <div
+          class="col-md-4"
+          style="
+            background-image: url('/assets/backgrounds/h.png');
+            background-size: cover;
+          "
+        >
+          <div class="container">
+            <form (submit)="sendEmail()">
+              <div class="form-group">
+                <h4 class="text-white text-center" style="margin: 30px">
+                  Sing In
+                </h4>
+                <input
+                  type="email"
+                  class="form-control text-black"
+                  id="email"
+                  name="email"
+                  [(ngModel)]="email"
+                  required
+                  placeholder="E-mail"
+                />
+                <button
+                  class="btn btn-dark form-control text-white"
+                  type="submit"
+                  [disabled]="isSubmitting"
+                >
+                  Log In
+                </button>
+              </div>
+              <div
+                class="mensaje alert alert-danger"
+                role="alert"
+                *ngIf="mensajeError"
+              >
+                <p class="small mb-0">{{ mensajeError }}</p>
+              </div>
+              <h6 class="text-white">Or sing in with</h6>
+              <div class="text-center">
+                <div class="text-center">
+                  <!-- Agrega un botón de inicio de sesión con Google -->
+                  <img src="/assets/images/login/google.png" class="icon" />
+                  <img src="/assets/images/login/facebook.png" class="icon" />
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </body>
+</html>

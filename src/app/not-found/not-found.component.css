@@ -1,0 +1,171 @@
+h2 {
+  text-align: center;
+  color: #d5d4d4; /* Cambia el color del título a rojo */
+  font-family: "Your Favorite Fancy Font", cursive;
+}
+
+h4 {
+  text-align: center;
+  color: #cb0c0c;
+}
+
+a {
+  text-align: center;
+  color: #cb0c0c;
+  text-decoration: none;
+}
+
+#logo {
+    position: fixed;
+    top: 20px; /* Ajusta la distancia desde la parte superior según tus necesidades */
+    right: 20px; /* Ajusta la distancia desde la derecha según tus necesidades */
+    width: 100px; /* Ajusta el ancho de la imagen según tus necesidades */
+    height: auto; /* Para mantener la proporción de la imagen */
+    z-index: 9999; /* Asegura que la imagen esté en la parte superior */
+  }
+  
+
+body {
+    background-image: url('/assets/backgrounds/nature-headphones.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-opacity: 0.3; /* Ajusta el nivel de opacidad */
+    height: 100vh; /* Ajusta la altura del fondo a la vista */
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .login-container {
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo negro transparente */
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 400px; /* Ancho máximo del contenedor */
+    width: 90%; /* Ancho del contenedor para tamaños de pantalla pequeños */
+    margin: 0 auto; /* Centrar horizontalmente */
+  }
+  
+form {
+  max-width: 400px;
+  margin: 20px auto;
+  padding: 40px;
+  background: linear-gradient(to right, #54545460);
+  position: relative;
+}
+
+form::before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  right: -10px;
+  bottom: -10px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 20 20'%3E%3Cpath fill='%23ff0000' d='M10 15.246L15.246 20l1.754-5.246L25 10l-5.246-1.754L15.246 0 10 5.246 4.754 0 0 4.754l5.246 1.754L4.754 15.246 10 20l5.246-5.246L20 15.246z'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+  background-size: 20px 20px;
+  pointer-events: none;
+  z-index: -1;
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+  color: #ff0000; /* Cambia el color de las etiquetas a rojo */
+  font-family: "Arial";
+}
+
+.mensaje {
+  color: #ff0000; /* Cambia el color del mensaje de error a rojo */
+  margin-top: 10px;
+  font-weight: 500;
+}
+
+input[type="email"] {
+  width: 100%;
+  padding: 10px;
+  background-color: #474646;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  font-size: 15px;
+  transition: border-color 0.3s ease;
+  color: #dedede; 
+}
+
+input[type="email"]:hover {
+  border-color: #d30606; /* Cambia el color del borde al pasar el mouse a rojo */
+}
+
+.btn-primary {
+  /* Mantén los estilos actuales del botón */
+  /* ... */
+  transition: background-color 0.5s ease;
+  border: none;
+  outline: none;
+}
+
+.gradient-custom-2 {
+  background: #ff0000;
+  background: linear-gradient(to right, #e00000);
+}
+
+@media (min-width: 768px) {
+  .gradient-form {
+    height: 100vh !important;
+  }
+}
+
+@media (min-width: 769px) {
+  .gradient-custom-2 {
+    border-top-right-radius: .3rem;
+    border-bottom-right-radius: .3rem;
+  }
+}
+
+.btn-primary:hover {
+    background-color: #bc0303; /* Cambia el color del botón al pasar el mouse a un rojo más oscuro */
+  }
+
+  .btn-primary {
+    /* Botón rojo por defecto */
+    background-color: #ff0000;
+    color: #fff; /* Texto blanco */
+    border: none;
+    outline: none;
+    transition: background-color 0.5s ease;
+  }
+  
+  .btn-primary:active {
+    background-color: #e00000; /* Cambia el color del botón a rojo oscuro cuando se presiona */
+  }
+
+    /* Media query para ajustar el ancho en pantallas más grandes */
+    @media (min-width: 768px) {
+        .login-container {
+          width: 70%; /* Ancho del contenedor para pantallas medianas y grandes */
+        }
+      }
+
+
+      .custom-btn {
+        background-color: #e20c0c; /* Color de fondo rojo */
+        color: #fff; /* Texto blanco */
+        border: none; /* Sin borde */
+        outline: none; /* Sin contorno al enfocar */
+        width: 100%; /* Ancho igual al campo de entrada */
+        padding: 7px; /* Espaciado interno */
+        border-radius: 5px; /* Bordes redondeados */
+        cursor: pointer; /* Cambia el cursor al pasar el mouse */
+        transition: background-color 0.5s ease; /* Transición suave para el color de fondo */
+      }
+      
+      /* Cambia el color del botón al pasar el mouse a un rojo más oscuro */
+      .custom-btn:hover {
+        background-color: #bc0303;
+      }
+
+      .custom-btn:focus {
+        background-color: #ff0000; /* Cambia el color de fondo a rojo cuando está enfocado */
+        box-shadow: none; /* Elimina la sombra predeterminada al enfocar */
+      }

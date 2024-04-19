@@ -1,0 +1,75 @@
+body {
+  color: #0D1B1E;
+}
+
+form {
+  max-width: 400px;
+  margin: 20px auto;
+  padding: 40px;
+  background: linear-gradient(to right, #54545460);
+  position: relative;
+  background-color: #00000043;
+  border-radius: 10px;
+}
+
+.mensaje {
+  color: #ba2d0b;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+
+input[type="tokken"] {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  font-size: 15px;
+  color: #dedede;
+  border-color: #ffffff;
+}
+
+#email {
+  border: none;
+  border-bottom: 1px solid black;
+  transition: border-bottom 0.3s ease-in-out;
+}
+
+#email:focus {
+  border-bottom: 1px solid #0751ff;
+}
+
+#email::placeholder {
+  transition: all 0.3s ease-in-out;
+  color: #0D1B1E;
+}
+
+#email:focus::placeholder {
+  transform: translateX(85%);
+}
+
+.right-background {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/assets/backgrounds/white-headphones.png');
+  background-size: cover;
+  height: 100vh;
+}
+.left-background {
+  background-image: url('/assets/backgrounds/h.png');
+  background-size: cover;
+  height: 100vh;
+}
+
+img {
+  width: 220px;
+  height: 220px;
+  object-fit: cover;
+  margin: 10px
+}
+
+.icon {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  margin: 10px;
+  border-radius: 10%;
+}

@@ -1,0 +1,191 @@
+
+.container {
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 1), transparent);
+  padding: 20px;
+  border-radius: 10px;
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.dashboard-container {
+    display: flex;
+    flex-direction: column;
+    background-color: #313131;
+    padding: 20px;
+  }
+
+  .background-container {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 1), transparent);
+    padding: 20px;
+  }
+
+.profile-picture img {
+  width: 40px; /* Tamaño de la imagen */
+  height: 40px;
+  border-radius: 50%;
+}
+  
+  .search-bar {
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo negro transparente */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1px;
+    border-radius: 30px;
+    width: 80%;
+    max-width: 400px;
+    margin-bottom: 10px;
+    margin: 0 auto;
+    background: linear-gradient(to right, #54545460);
+  }
+
+  .search-bar input:focus {
+    color: red; /* Cambia el color de fuente a rojo cuando está enfocado */
+  }
+  
+  .search-bar input {
+    flex: 1;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: white;
+    font-size: 18px;
+  }
+  
+  .search-icon {
+    color: red;
+    font-size: 14px;
+  }
+
+  .genre-container {
+    display: flex;
+    flex-direction: row; /* Asegura que los bloques de género estén en una fila */
+    overflow-x: hidden; /* Oculta la barra de desplazamiento horizontal */
+  }
+  
+  .playlists {
+    display: flex;
+    overflow-x: auto;
+    margin-bottom: 20px;
+  }
+  
+  .playlist-block {
+    max-width: 150px; /* Ancho máximo de los bloques de playlists */
+    max-height: 200px; /* Alto máximo de los bloques de playlists */
+    width: 150px; /* Ancho fijo para los bloques de género */
+    height: 150px;
+    background-color: #42424228;
+    border-radius: 10px;
+    margin-right: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .playlist-block img {
+    width: 100px;
+    height: 100px;
+    border-radius: 2%;
+    margin-bottom: 10px;
+  }
+
+  .playlist-block h3 {
+    font-size: 16px;
+    margin: 0;
+  }
+
+  .profile-container {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    width: calc(100% - 40px);
+    border-radius: 10px;
+    margin: 10px; /* Agrega un margen alrededor del contenedor */
+    background-color: #202020;
+  }
+
+  .artists {
+    color: white; /* Establece el color del texto en blanco */
+    box-sizing: border-box; /* Incluye el borde en el tamaño total */
+    display: flex;
+    align-items: center; /* Centra verticalmente */
+    justify-content: left; /* Centra horizontalmente */
+    text-align: center; /* Centra el texto horizontalmente */
+}
+
+  .page-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.5));
+    z-index: -1; /* Asegura que el fondo esté detrás de otros elementos */
+  }
+  
+
+h4, h3, h6, p {
+  color: white; /* Cambia el color del texto en los elementos h1 y p a blanco */
+}
+
+body {
+  margin: 0; /* Elimina el margen predeterminado */
+  padding: 0; /* Elimina el relleno predeterminado */
+}
+
+html, body {
+  height: 100%; /* Establece el alto del HTML y el cuerpo al 100% */
+  overflow: hidden; /* Evita el desbordamiento horizontal y vertical */
+}
+
+      /* Estilos para centrar el contenido */
+      .centered-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        background-color: rgb(42, 42, 42);
+      }
+
+      .custom-column {
+        margin: 10px; /* Agrega un margen alrededor del contenedor */
+        background-color: #202020;
+        padding: 20px;
+        border-radius: 10px;
+      }
+
+      .centered-box {
+        background-color: #202020;
+        border-radius: 10px;
+        margin: 20px 0;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        color: white;
+        overflow: auto;
+      }
+
+      .btn-spotify {
+        background-color: #b91d1d; /* Color de fondo de Spotify */
+        color: white; /* Color del texto en blanco */
+        border: none; /* Sin borde */
+        border-radius: 50px; /* Borde redondeado */
+        padding: 10px 20px; /* Espaciado interno */
+        font-weight: bold; /* Texto en negrita */
+      }
+      
+      .btn-spotify:hover {
+        background-color: #b91d1d; /* Cambio de color al pasar el mouse */
+        cursor: pointer; /* Cambio de cursor al pasar el mouse */
+      }
+      
+

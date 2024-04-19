@@ -1,0 +1,191 @@
+
+.container {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 1), transparent);
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .dashboard-container {
+      display: flex;
+      flex-direction: column;
+      background-color: #313131;
+      padding: 20px;
+    }
+  
+    .background-container {
+      background: linear-gradient(to bottom, rgba(0, 0, 0, 1), transparent);
+      padding: 20px;
+    }
+  
+  .profile-picture img {
+    width: 40px; /* Tamaño de la imagen */
+    height: 40px;
+    border-radius: 50%;
+  }
+    
+    .search-bar {
+      background-color: rgba(0, 0, 0, 0.5); /* Fondo negro transparente */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1px;
+      border-radius: 30px;
+      width: 80%;
+      max-width: 400px;
+      margin-bottom: 10px;
+      margin: 0 auto;
+      background: linear-gradient(to right, #54545460);
+    }
+  
+    .search-bar input:focus {
+      color: red; /* Cambia el color de fuente a rojo cuando está enfocado */
+    }
+    
+    .search-bar input {
+      flex: 1;
+      background: transparent;
+      border: none;
+      outline: none;
+      color: white;
+      font-size: 18px;
+    }
+    
+    .search-icon {
+      color: red;
+      font-size: 14px;
+    }
+  
+    .genre-container {
+      display: flex;
+      flex-direction: row; /* Asegura que los bloques de género estén en una fila */
+      overflow-x: hidden; /* Oculta la barra de desplazamiento horizontal */
+    }
+    
+    .playlists {
+      display: flex;
+      overflow-x: auto;
+      margin-bottom: 20px;
+    }
+    
+    .playlist-block {
+      width: 180px; /* Ancho fijo para los bloques de género */
+      height: 180px;
+      background-color: #42424228;
+      border-radius: 10px;
+      margin-right: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+    
+    .playlist-block img {
+      width: 100px;
+      height: 100px;
+      border-radius: 2%;
+      margin-bottom: 10px;
+    }
+  
+    .playlist-block h3 {
+      font-size: 16px;
+      margin: 0;
+    }
+  
+    .profile-container {
+      display: flex;
+      align-items: center;
+      padding: 30px;
+      width: 100%;
+      background: linear-gradient(to bottom, rgb(0, 0, 0) 0%, rgba(83, 0, 0, 0) 100%);
+    }
+  
+    .artists {
+      color: white; /* Establece el color del texto en blanco */
+      box-sizing: border-box; /* Incluye el borde en el tamaño total */
+      display: flex;
+      align-items: center; /* Centra verticalmente */
+      justify-content: left; /* Centra horizontalmente */
+      text-align: center; /* Centra el texto horizontalmente */
+  }
+  
+    .page-background {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(to right, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.5));
+      z-index: -1; /* Asegura que el fondo esté detrás de otros elementos */
+    }
+    
+  
+  h4, h3, p {
+    color: white; /* Cambia el color del texto en los elementos h1 y p a blanco */
+  }
+  
+  body {
+    margin: 0; /* Elimina el margen predeterminado */
+    padding: 0; /* Elimina el relleno predeterminado */
+  }
+  
+  html, body {
+    height: 100%; /* Establece el alto del HTML y el cuerpo al 100% */
+    overflow: hidden; /* Evita el desbordamiento horizontal y vertical */
+  }
+  .white-h1 {
+    color: white;
+  }
+  
+        /* Estilos para centrar el contenido */
+        .centered-content {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          min-height: 100vh;
+          background-color: rgb(42, 42, 42);
+        }
+  
+        .album-info-container {
+          display: flex;
+          align-items: flex-start; /* Align items to the top */
+        }
+        
+        .album-photo-container {
+          width: 300px; /* Set a fixed width for the container */
+          margin-right: 20px; /* Add some margin to separate it from the songs */
+        }
+        
+        .album-photo {
+          width: 100%; /* Make sure the album photo fills its container */
+          height: auto; /* Maintain aspect ratio */
+          border-radius: 10px;
+          box-shadow: 5px 0px 10px rgba(0, 0, 0, 0.5);
+        }
+        
+        .songs-list-container ul {
+          list-style: none; /* Remove bullet points */
+          padding-left: 0; /* Remove default left padding from the list */
+        }
+      
+        .song-box { 
+          max-width: 100%; /* Establece un ancho máximo del 100% */
+          background-color: rgba(0, 0, 0, 0);
+          border-radius: 5px;
+          padding: 5px 10px;
+          margin-right: 10px;
+          display: inline-block;
+          transition: box-shadow 0.8s ease-in-out; /* Agrega una transición suave para la sombra */
+         
+        }
+
+        .song-box:hover {
+          box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.361);
+        }
+        
+  

@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="row flex-nowrap">
+        <div class="col-auto col-md-3 col-xl-2 px-sm-2 px-0 bg-dark">
+          <div
+            class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-white min-vh-100"
+          >
+            <a
+              href="/"
+              class="d-flex align-items-center pb-3 mb-md-0 me-md-auto text-white text-decoration-none"
+            >
+              <span class="fs-5 d-none d-sm-inline">Menu</span>
+            </a>
+            <ul
+              class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start"
+              id="menu"
+            >
+              <li class="nav-item">
+                <a (click)="authoritzedBienvenido()" class="nav-link px-0">
+                  <i class="fas fa-home">&nbsp;&nbsp;</i>
+                  <span class="d-none d-sm-inline">Home</span>
+                </a>
+              </li>
+              <li>
+                <a (click)="authoritzedProfile()"data-bs-toggle="collapse"class="nav-link px-0 align-middle">
+                  <i class="fas fa-user">&nbsp;&nbsp;</i>
+                  <span class="ms-1 d-none d-sm-inline">Profile</span>
+                </a>
+              </li>
+                  <li>
+                    <a (click)="authoritzedOtherdata()" class="nav-link px-0">
+                      <i class="fas fa-file-alt">&nbsp;&nbsp;</i>
+                      <span class="d-none d-sm-inline">Other Data</span></a>
+                  </li>
+              <li>
+                <a
+                  (click)="authoritzedInformation()"
+                  class="nav-link px-0 align-middle"
+                >
+                  <i class="fas fa-info-circle">&nbsp;&nbsp;</i>
+                  <span class="ms-1 d-none d-sm-inline">Information</span></a
+                >
+              </li>
+            </ul>
+            <hr />
+          </div>
+        </div>
+
+        <div class="col py-3">
+          <br /><br />
+          <form id="perfil-form" (submit)="guardarDatosUsuario()">
+            <div class="row mb-3">
+              <div class="col">
+                <label for="username">Username:</label>
+                <input
+                  type="text"
+                  id="username"
+                  name="username"
+                  [(ngModel)]="username"
+                  required
+                />
+              </div>
+              <div class="col">
+                <label for="nombre">Nombre:</label>
+                <input
+                  type="text"
+                  id="nombre"
+                  name="nombre"
+                  [(ngModel)]="nombre"
+                  required
+                />
+              </div>
+            </div>
+            <div class="row mb-3">
+              <div class="col">
+                <label for="apellido1">Apellido 1:</label>
+                <input
+                  type="text"
+                  id="apellido1"
+                  name="apellido1"
+                  [(ngModel)]="apellido1"
+                  required
+                />
+              </div>
+              <div class="col">
+                <label for="apellido2">Apellido 2:</label>
+                <input
+                  type="text"
+                  id="apellido2"
+                  name="apellido2"
+                  [(ngModel)]="apellido2"
+                  required
+                />
+              </div>
+            </div>
+            <div class="row mb-3">
+              <div class="col">
+                <label for="correo">Correo:</label>
+                <input
+                  type="email"
+                  id="correo"
+                  name="correo"
+                  [(ngModel)]="email"
+                  disabled
+                />
+              </div>
+              <div class="col">
+                <label for="fechaNacimiento">Fecha de Nacimiento:</label>
+                <input
+                  type="date"
+                  id="fechaNacimiento"
+                  name="fechaNacimiento"
+                  [(ngModel)]="fechaNacimiento"
+                  required
+                />
+              </div>
+            </div>
+            <div class="row mb-3">
+              <div class="col">
+                <label for="sexo">Sexo:</label>
+                <select id="sexo" name="sexo" [(ngModel)]="sexo" required>
+                  <option value="" disabled selected>Seleccione</option>
+                  <option value="masculino">Masculino</option>
+                  <option value="femenino">Femenino</option>
+                  <option value="otro">Otro</option>
+                </select>
+              </div>
+              <div class="col">
+                <label for="formacionUniversitaria"
+                  >Formación Universitaria:</label
+                >
+                <select
+                  id="formacionUniversitaria"
+                  name="formacionUniversitaria"
+                  [(ngModel)]="formacionUniversitaria"
+                  required
+                >
+                  <option value="" disabled selected>Seleccione</option>
+                  <option value="si">Sí</option>
+                  <option value="no">No</option>
+                </select>
+              </div>
+            </div>
+            <div class="row mb-3">
+              <div class="col">
+                <label for="centroEducativo">Centro Educativo:</label>
+                <input
+                  type="text"
+                  id="centroEducativo"
+                  name="centroEducativo"
+                  [(ngModel)]="centroEducativo"
+                />
+              </div>
+              <div class="col">
+                <label for="documentoIdentificacion">DIN / NIE:</label>
+                <input
+                  type="text"
+                  id="documentoIdentificacion"
+                  name="documentoIdentificacion"
+                  [(ngModel)]="documentoIdentificacion"
+                  required
+                />
+              </div>
+            </div>
+            <div class="row mb-3">
+              <div class="col">
+                <label for="formacionCFGS">Formación:</label>
+                <input
+                  type="text"
+                  id="formacionCFGS"
+                  name="formacionCFGS"
+                  [(ngModel)]="formacion"
+                />
+              </div>
+              <div class="col">
+                <label for="ciudad">Ciudad:</label>
+                <input
+                  type="text"
+                  id="ciudad"
+                  name="ciudad"
+                  [(ngModel)]="ciudad"
+                  required
+                />
+              </div>
+            </div>
+            <div class="row mb-3">
+              <div class="col">
+                <label for="provincia">Provincia:</label>
+                <input
+                  type="text"
+                  id="provincia"
+                  name="provincia"
+                  [(ngModel)]="provincia"
+                  required
+                />
+              </div>
+              <div class="col">
+                <label for="codigoPostal">Código Postal:</label>
+                <input type="text" id="codigoPostal" name="codigoPostal" [(ngModel)]="codigoPostal" required pattern="[0-9]{5}"/>
+              </div>
+            </div>
+            <button type="submit">Save</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

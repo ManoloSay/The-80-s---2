@@ -1,0 +1,157 @@
+[
+  {
+    "name": "Ariana Grande",
+    "Photo": "https://th.bing.com/th/id/R.a2e179afba669dd84384a1bb86d61386?rik=WUOD5eainQCgyQ&pid=ImgRaw&r=0",
+    "genre": "Pop"
+  },
+  {
+    "name": "Taylor Swift",
+    "Photo": "https://gracemcgettigan.files.wordpress.com/2015/01/tay.jpg",
+    "genre": ["Country", "Pop", "Electropop"]
+  },
+  {
+    "name": "Ed Sheeran",
+    "Photo": "https://static01.nyt.com/images/2021/10/29/arts/29sheeran-review/29sheeran-review-mediumSquareAt3X.jpg"
+    ,"genre": ["Pop", "Folk"]
+  },
+  {
+    "name": "Justin Bieber",
+    "Photo": "https://images5.fanpop.com/image/photos/31400000/Justin-Bieber-justin-bieber-31401077-496-443.jpg"
+    ,"genre": ["Pop", "HipHop"]
+  },
+  {
+    "name": "Rihanna",
+    "Photo": "https://i.pinimg.com/736x/a9/a5/51/a9a551bf303d3d70cb09cd5cc92d64a2.jpg"
+    ,"genre": ["Pop", "HipHop"]
+  },
+  {
+    "name": "Shawn Mendes",
+    "Photo": "https://hips.hearstapps.com/hmg-prod/images/canadian-pop-musician-shawn-mendes-photographed-backstage-before-a-live-performance-at-the-hammersmith-apollo-in-london-on-may-5-2016-photo-by-will-ireland_total-guitar-magazine-via-getty-images-500.jpg"
+    ,"genre": ["Pop", "Folk"]
+  },
+  {
+    "name": "Billie Eilish",
+    "Photo": "https://i.pinimg.com/1200x/dd/cb/e7/ddcbe78020fb3e1d5c6f9b8a41095af6.jpg"
+    ,"genre": "Pop"
+  },
+  {
+    "name": "Bruno Mars",
+    "Photo": "https://storage.googleapis.com/ares-profile-pictures/hd/brunomars-d90808e075bf07150dd55d99cc4a3c51_hd.jpg"
+    ,"genre": "Pop"
+  },
+  {
+    "name": "Selena Gomez",
+    "Photo": "https://m.media-amazon.com/images/M/MV5BMjAwNTE2MDMyMl5BMl5BanBnXkFtZTgwMjAyODM3MTI@._V1_.jpg"
+    ,"genre": ["Pop", "Folk"]
+  },
+  {
+    "name": "The Weekend",
+    "Photo": "https://bloximages.chicago2.vip.townnews.com/thestar.com/content/tncms/assets/v3/editorial/3/93/3936b8db-7c1c-502f-96e5-5517ab541a68/645a3dc217934.image.jpg?crop=800%2C800%2C200%2C0&resize=1200%2C1200&order=crop%2Cresize"
+    ,"genre": "Pop"
+  },
+  {
+    "name": "Drake",
+    "Photo": "https://thefader-res.cloudinary.com/private_images/w_640,c_limit,f_auto,q_auto:eco/iwussu1yrp4nlpml4efa/drake-views-from-the-6-cover-story-interview.jpg"
+    ,"genre": ["Pop", "Folk"]
+  },
+  {
+    "name": "Lady Gaga",
+    "Photo": "https://www.neh.gov/sites/default/files/2018-06/2017_04-Fall_Fame_01.jpg"
+    ,"genre": "Pop"
+  },
+  {
+    "name": "Post Malone",
+    "Photo": "data:image/jpeg;base64,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"
+    ,"genre": "Pop"
+  },
+  {
+    "name": "Adele",
+    "Photo": "https://i.pinimg.com/736x/13/b2/18/13b218257756135657857ce8f43daa58.jpg"
+    ,"genre": "Pop"
+  },
+  {
+    "name": "Camila Cabello",
+    "Photo": "https://www.shape.com/thmb/p_8sfun0FRqwxcNI1SW1Y2KwZ0o=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/Camila-Cabello-Beach-Paparazzi-GettyImages-1388446481-2000-22e3b4ad5ac04b73a08954cb957b7843.jpg"
+    ,"genre": ""
+  },
+  {
+    "name": "Cardi B",
+    "Photo": "https://cdn.britannica.com/85/229185-050-3CC1C44E/Cardi-B-2019.jpg"
+    ,"genre": ""
+  },
+  {
+    "name": "Sam Smith",
+    "Photo": "https://cdn1.umg3.net/1248-cdn/portrait.jpg"
+    ,"genre": ""
+  },
+  {
+    "name": "Harry Styles",
+    "Photo": "https://m.media-amazon.com/images/M/MV5BMTUxMzU2MTk1OF5BMl5BanBnXkFtZTgwNzg4NjAwMzI@._V1_.jpg"
+    ,"genre": "Pop"
+  },
+  {
+    "name": "Lana Del Rey",
+    "Photo": "https://image.tmdb.org/t/p/original/wpwC6oB5WD8BijO4G9vsUn69NNY.jpg"
+    ,"genre": "Rap"
+  },
+  {
+    "name": "Alicia Keys",
+    "Photo": "https://www.singers.com/people/images/AliciaKeys.jpg"
+    ,"genre": ""
+  },
+  {
+    "name": "Maroon 5",
+    "Photo": "https://avatarfiles.alphacoders.com/184/184286.jpg"
+    ,"genre": "Pop"
+  },
+  {
+    "name": "Nicki Minaj",
+    "Photo": "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/cardi-b-nicki-minaj-1544116548.jpg?crop=0.502xw:1.00xh;0.498xw,0&resize=480:*"
+    ,"genre": "Pop"
+  },
+  {
+    "name": "Imagine Dragons",
+    "Photo": "data:image/jpeg;base64,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"
+    ,"genre": "Electronic"
+  },
+  {
+    "name": "Chris Brown",
+    "Photo": "https://masonalsuhailykc.files.wordpress.com/2016/04/pic5.png"
+    ,"genre": "Pop"
+  },
+  {
+    "name": "Twenty One Pilots",
+    "Photo": "https://raptv.com/wp-content/uploads/Twenty-One-Pilots-Back-to-Back.jpg"
+    ,"genre": "Rap"
+  },
+  {
+    "name": "Lorde",
+    "Photo": "https://api.stereofox.com/wp-content/uploads/2016/02/lorde-stereofoxprofile.png"
+    ,"genre": "Rap"
+  },
+  {
+    "name": "P!nk",
+    "Photo": "https://i.pinimg.com/originals/fc/1f/50/fc1f508d07426a44510faae388d05422.jpg"
+    ,"genre": "Pop"
+  },
+  {
+    "name": "Eminem",
+    "Photo": "https://i.pinimg.com/736x/65/45/08/654508a0c4a2920ccd48ca6ba9463b05.jpg"
+    ,"genre": "Rap"
+  },
+  {
+    "name": "Coldplay",
+    "Photo": "https://i.scdn.co/image/ab6761610000e5eb989ed05e1f0570cc4726c2d3"
+    ,"genre": ["Pop", "Rock"]
+  },
+  {
+    "name": "AC/DC",
+    "Photo": "https://www.metalsymphony.com/wp-content/uploads/2020/10/pwr-up-acdc-shot-dark.jpg"
+    ,"genre": ["Rock"]
+  },
+  {
+    "name": "Pink Floyd",
+    "Photo": "https://e00-elmundo.uecdn.es/assets/multimedia/imagenes/2023/08/16/16921937286832.jpg"
+    ,"genre": ["Alternative", "Rock"]
+  }
+]

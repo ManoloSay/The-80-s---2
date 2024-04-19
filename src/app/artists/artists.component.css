@@ -1,0 +1,64 @@
+
+  /* Estilo para los artistas individuales */
+  .artist {
+    margin-right: 20px;
+    margin-top: 20px;
+    max-width: 230px; /* Ancho máximo deseado para cada artista */
+  }
+  
+  .artists-row {
+    display: flex;
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan a la siguiente fila */
+    justify-content: flex-start; /* Alinea los elementos al inicio del contenedor */
+  }
+  
+  .artist-photo {
+    width: 50px; /* Ancho deseado */
+    height: 50px; /* Alto deseado */
+    border-radius: 50%; /* Hacer la imagen redonda */
+    margin-right: 10px; /* Espacio entre la foto y el nombre del artista */
+    object-fit: cover; /* Ajustar la imagen al cuadro sin distorsionarla */
+  }
+  
+  .artist-name {
+    font-size: 16px; /* Tamaño de fuente del nombre del artista */
+    color: #fff; /* Color del texto (ajusta según tu diseño) */
+  }
+  
+  .artist-block h3 {
+    font-size: 16px;
+    margin: 0;
+  }
+
+  .left-button, .right-button {
+    margin-left: 10px; /* Espacio entre el contenedor de artistas y el botón de flecha izquierda */
+  }
+
+  .scroll-button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 24px;
+    color: #ffffff87;
+  }
+
+/* Estilo para el botón "More..." */
+button {
+  background-color: #33333300; /* Color de fondo trans */
+  color: #fff; /* Color del texto blanco */
+  border: none; /* Sin borde */
+  padding: 8px 15px; /* Espaciado interno */
+  border-radius: 3px; /* Borde redondeado */
+  cursor: pointer; /* Cursor de puntero al pasar por encima */
+  font-size: 14px; /* Tamaño de fuente */
+}
+
+button:hover {
+  background-color: #e3060671; /* Color de fondo al pasar el mouse (gris oscuro) */
+}
+
+.artist-genre {
+  font-size: 12px; /* Tamaño de fuente para el género */
+  color: #888; /* Color del texto del género (gris) */
+  margin-top: 4px; /* Espacio superior para separar el nombre del género */
+}

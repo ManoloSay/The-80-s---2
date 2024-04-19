@@ -1,0 +1,10 @@
+<div class="genres">
+  <div class="genre-container" #genreContainer>
+    <div class="genre-block" *ngFor="let genre of genresToShow; let last = last">
+      <!-- Solo muestra el nombre del género si no es el botón "more" -->
+      <h3 *ngIf="!last">{{ genre }}</h3>
+      <!-- Si es el último género visible, muestra el botón "more" sin nombre -->
+      <button (click)="mostrarMas()" *ngIf="last && !mostrarMasGeneros" class="more-button">...</button>
+    </div>
+  </div>
+</div>

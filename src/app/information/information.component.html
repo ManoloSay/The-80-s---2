@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="row flex-nowrap">
+        <div class="col-auto col-md-3 col-xl-2 px-sm-2 px-0 bg-dark">
+          <div
+            class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-white min-vh-100"
+          >
+            <a
+              href="/"
+              class="d-flex align-items-center pb-3 mb-md-0 me-md-auto text-white text-decoration-none"
+            >
+              <span class="fs-5 d-none d-sm-inline">Menu</span>
+            </a>
+            <ul
+              class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start"
+              id="menu"
+            >
+              <li class="nav-item">
+                <a (click)="authoritzedBienvenido()" class="nav-link px-0">
+                  <i class="fas fa-home">&nbsp;&nbsp;</i>
+                  <span class="d-none d-sm-inline">Home</span>
+                </a>
+              </li>
+              <li>
+                <a (click)="authoritzedProfile()"data-bs-toggle="collapse"class="nav-link px-0 align-middle">
+                  <i class="fas fa-user">&nbsp;&nbsp;</i>
+                  <span class="ms-1 d-none d-sm-inline">Profile</span>
+                </a>
+              </li>
+                  <li>
+                    <a (click)="authoritzedOtherdata()" class="nav-link px-0">
+                      <i class="fas fa-file-alt">&nbsp;&nbsp;</i>
+                      <span class="d-none d-sm-inline">Other Data</span></a>
+                  </li>
+              <li>
+                <a
+                  (click)="authoritzedInformation()"
+                  class="nav-link px-0 align-middle"
+                >
+                  <i class="fas fa-info-circle">&nbsp;&nbsp;</i>
+                  <span class="ms-1 d-none d-sm-inline">Information</span></a
+                >
+              </li>
+            </ul>
+            <hr />
+          </div>
+        </div>
+        
+        <div class="col py-3">
+          <h5>
+            Página Web y Política de Privacidad: Protegiendo tus Datos en el
+            Ciberespacio
+          </h5>
+          <p>
+            Bienvenido/a a nuestra página web, un espacio digital diseñado para
+            brindarte información relevante, entretenimiento y servicios útiles.
+            Aquí, tu privacidad y seguridad son nuestra máxima prioridad.
+            Queremos que te sientas confiado/a al navegar en nuestro sitio, por
+            lo que nos tomamos en serio la protección de tus datos personales y
+            el cumplimiento de todas las leyes y regulaciones aplicables.
+          </p>
+          <h5>Nuestra Página Web</h5>
+          <p>
+            Nuestra página web se compone de diversas secciones que abarcan
+            temas variados, como noticias, artículos de opinión, tutoriales,
+            productos y servicios, entre otros. Nuestro objetivo es proporcionar
+            contenido de calidad y útil para nuestros visitantes, sin
+            comprometer su privacidad.
+          </p>
+          <h5>Recolección y Uso de Datos</h5>
+          <p>
+            Cuando visitas nuestra página web, podemos recopilar cierta
+            información no identificable, como tu dirección IP, tipo de
+            navegador, idioma, y páginas visitadas. Esta información se utiliza
+            para mejorar la experiencia del usuario, analizar tendencias y
+            administrar el sitio de manera efectiva. No recopilamos datos
+            personales sin tu consentimiento. Si decides interactuar con nuestra
+            página web al registrarte, suscribirte a nuestro boletín o utilizar
+            nuestros servicios, es posible que te solicitemos ciertos datos
+            personales, como tu nombre, dirección de correo electrónico, fecha
+            de nacimiento, etc. Esta información se utilizará para brindarte una
+            experiencia personalizada y enviarte información relevante según tus
+            preferencias.
+          </p>
+          <h5>Cookies y Tecnologías de Rastreo</h5>
+          <p>
+            Nuestra página web utiliza cookies y tecnologías similares para
+            mejorar la experiencia del usuario. Las cookies son pequeños
+            archivos que se almacenan en tu dispositivo y nos permiten recordar
+            cierta información cuando vuelves a visitarnos. Puedes configurar tu
+            navegador para bloquear o eliminar las cookies, pero ten en cuenta
+            que esto puede afectar la funcionalidad del sitio.
+          </p>
+          <h5>Seguridad de los Datos</h5>
+          <p>
+            Nos tomamos muy en serio la seguridad de tus datos. Hemos
+            implementado medidas técnicas y organizativas para proteger la
+            información que recopilamos y evitar el acceso no autorizado, la
+            divulgación o la alteración de tus datos personales.
+          </p>
+          <h5>Enlaces a Terceros</h5>
+          <p>
+            Nuestra página web puede contener enlaces a sitios de terceros, como
+            redes sociales o sitios de socios. Es importante que revises las
+            políticas de privacidad de estos sitios, ya que no tenemos control
+            sobre su contenido ni sus prácticas de privacidad.
+          </p>
+          <h5>Menores de Edad</h5>
+          <p>
+            Nuestra página web no está dirigida a menores de 13 años. Si eres
+            menor de edad, no proporciones ninguna información personal en
+            nuestro sitio sin el consentimiento de tus padres o tutores legales.
+          </p>
+          <h5>Modificaciones a la Política de Privacidad</h5>
+          <p>
+            Nos reservamos el derecho de actualizar o modificar nuestra política
+            de privacidad en cualquier momento. Cualquier cambio se reflejará en
+            esta página, y te recomendamos revisar periódicamente esta sección
+            para estar informado/a sobre cómo protegemos tu privacidad.
+          </p>
+
+          <p>
+            En resumen, valoramos tu confianza y queremos que te sientas
+            seguro/a al utilizar nuestra página web. Nuestro compromiso con la
+            privacidad y seguridad de tus datos es sólido, y trabajamos
+            constantemente para mejorar y adaptar nuestras prácticas a los
+            estándares más altos. Si tienes alguna pregunta o inquietud sobre
+            nuestra política de privacidad o el manejo de tus datos, no dudes en
+            ponerte en contacto con nosotros a través de los canales
+            proporcionados en nuestro sitio. Gracias por visitarnos y ser parte
+            de nuestra comunidad en línea. ¡Disfruta de tu experiencia en
+            nuestra página web!
+          </p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

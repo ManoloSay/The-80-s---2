@@ -1,0 +1,16 @@
+<div class="artists-container">
+  <div class="artists" id="artists-scroll">
+    <div class="row artists-row">
+      <div class="col-md-12 artist" *ngFor="let artist of visibleArtists">
+        <div class="artist-content" (click)="onArtistClick(artist)">
+          <div class="artist-photo-container">
+            <img [src]="artist.Photo" [alt]="artist.name" class="artist-photo" />
+            <span class="artist-name">{{ artist.name }}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<br>
+<button (click)="showAllArtists()" *ngIf="!showAll">More artists...</button>

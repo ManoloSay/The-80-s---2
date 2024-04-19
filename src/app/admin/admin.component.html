@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Enlaza Bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <title>Musitube</title>
+  </head>
+  <body style="background-color: rgb(42, 42, 42)">
+    <!-- Contenedor del Navbar con espacio y bordes redondeados -->
+    <div class="p-3 rounded">
+      <!-- Navbar -->
+      <nav
+        class="navbar navbar-expand-lg navbar-dark rounded"
+        style="background-color: #202020"
+      >
+        <div class="container-fluid">
+          <a class="navbar-brand text-success" href="/dashboard">The 80's</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="/admin"
+                  >Home</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/admin">Artists</a>
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link disabled"
+                  href="#"
+                  tabindex="-1"
+                  aria-disabled="true"
+                  >Stadistics</a
+                >
+              </li>
+            </ul>
+            <form class="d-flex">
+              <input
+                class="form-control me-2"
+                type="search"
+                placeholder="Search"
+                aria-label="Search"
+              />
+              <button class="btn btn-outline-success" type="submit">
+                Search
+              </button>
+            </form>
+          </div>
+        </div>
+      </nav>
+      <!-- Navbar -->
+    </div>
+
+    <div class="container-fluid">
+      <div class="row">
+        <!-- Lado izquierdo -->
+        <div class="col-md-2">
+          <div class="p-2 rounded" style="background-color: #202020">
+            <nav id="sidebar" class="text-white sidebar">
+              <div class="position-sticky">
+                <ul class="nav flex-column">
+                  <li class="nav-item">
+                    <h5>Filters</h5>
+                    <label class="nav-link checkbox-label">
+                      <input
+                        type="checkbox"
+                        class="form-check-input"
+                        (click)="toggleRoleFilter()"
+                        [checked]="showRoleFilter"
+                      />
+                      <span class="d-md-none d-lg-inline text-success m-2"
+                        >Role</span
+                      >
+                    </label>
+                    <div *ngIf="showRoleFilter" class="p-2">
+                      <select
+                        class="form-select"
+                        aria-label="Default select example"
+                      >
+                        <option value="1">Admin</option>
+                        <option value="2">Superadmin</option>
+                        <option value="3">User</option>
+                        <option value="4">Editor</option>
+                      </select>
+                    </div>
+                  </li>
+                  <li class="nav-item">
+                    <label class="nav-link checkbox-label">
+                      <input
+                        type="checkbox"
+                        class="form-check-input"
+                        (click)="toggleAgeFilter()"
+                        [checked]="showAgeFilter"
+                      />
+                      <span class="d-md-none d-lg-inline text-success m-2"
+                        >Age</span
+                      >
+                    </label>
+                    <div *ngIf="showAgeFilter" class="p-2">
+                      <input
+                        type="number"
+                        class="form-control"
+                        placeholder="Enter age"
+                      />
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div class="col-md-2 mt-3">
+                <button class="btn btn-success" (click)="applyFilters()">
+                  Apply
+                </button>
+              </div>
+            </nav>
+          </div>
+        </div>
+        <!-- Lado izquierdo -->
+
+        <div class="col-md-10 min-vh-100">
+          <div
+            class="p-4 rounded text-white mb-4"
+            style="background-color: #202020"
+            id="baseDatosCollapse"
+          >
+            <!-- Bloques 
+            <div class="d-flex justify-content-between">
+              <div
+                *ngFor="let index of [0]"
+                class="card mb-2"
+                [ngStyle]="{
+                  'background-color':
+                    index === hoveredIndex ? currentColor : '#28a745'
+                }"
+                style="max-width: 18rem"
+                (mouseover)="hoveredIndex = index; changeColor('#53E16A')"
+                (mouseout)="hoveredIndex = null; resetColor()"
+              >
+                <div class="card-header">Header</div>
+                <div class="card-body">
+                  <h5 class="card-title">Success card title</h5>
+                  <p class="card-text">
+                    Some quick example text to build on the card title and make
+                    up the bulk of the card's content.
+                  </p>
+                </div>
+              </div>
+            </div>-->
+
+            <div class="container">
+              <h1>Users Stadistics</h1>
+              <div class="row">
+                <div class="col">
+                  <div class="progress">
+                    <div
+                      class="progress-bar bg-success"
+                      role="progressbar"
+                      style="width: 25%"
+                      aria-valuenow="25"
+                      aria-valuemin="0"
+                      aria-valuemax="100"
+                    ></div>
+                  </div>
+                  <p class="mt-3">Users With PREMIUM</p>
+                </div>
+                <div class="col">
+                  <div class="progress">
+                    <div
+                      class="progress-bar bg-secondary"
+                      role="progressbar"
+                      style="width: 50%"
+                      aria-valuenow="50"
+                      aria-valuemin="0"
+                      aria-valuemax="100"
+                    ></div>
+                  </div>
+                  <p class="mt-3">Free Users</p>
+                </div>
+                <div class="col">
+                  <div class="progress">
+                    <div
+                      class="progress-bar bg-success"
+                      role="progressbar"
+                      style="width: 75%"
+                      aria-valuenow="75"
+                      aria-valuemin="0"
+                      aria-valuemax="100"
+                    ></div>
+                  </div>
+                  <p class="mt-3">General Users</p>
+                </div>
+              </div>
+            </div>
+            <!-- Bloques -->
+
+            <h6>Users</h6>
+            <hr />
+
+            <div *ngIf="showUsersContent">
+              <div class="text-center">
+                <h6>
+                  <button
+                    class="btn btn-outline-success"
+                    type="button"
+                    (click)="showAddAccountForm = true"
+                  >
+                    Add New User Account
+                  </button>
+                </h6>
+              </div>
+
+              <div class="row g-4">
+                <div
+                  *ngFor="
+                    let usuario of datosBaseDeDatos | keyvalue;
+                    let i = index
+                  "
+                  class="col-12"
+                >
+                  <div class="p-4 rounded border border-secondary mb-3">
+                    <div class="row">
+                      <div class="col-sm-3">
+                        <strong>Email:</strong>
+                      </div>
+                      <div class="col-sm-9">
+                        <span
+                          *ngIf="!editMode || i !== usuarioEnEdicion"
+                          class="ms-2"
+                          >{{ usuario.value.correo }}</span
+                        >
+                        <input
+                          *ngIf="editMode && i === usuarioEnEdicion"
+                          [(ngModel)]="usuario.value.correo"
+                          placeholder="New Email"
+                          class="ms-2 form-control bg-black text-white border border-success"
+                        />
+                      </div>
+                    </div>
+
+                    <div class="row">
+                      <div class="col-sm-3">
+                        <strong>Registed:</strong>
+                      </div>
+                      <div class="col-sm-9">
+                        <span
+                          *ngIf="!editMode || i !== usuarioEnEdicion"
+                          class="ms-2"
+                          >{{ usuario.value.registrado ? "Yes" : "No" }}</span
+                        >
+                        <select
+                          *ngIf="editMode && i === usuarioEnEdicion"
+                          [(ngModel)]="usuario.value.registrado"
+                          class="ms-2 form-select bg-black text-white border border-success"
+                        >
+                          <option value="true">Yes</option>
+                          <option value="false">No</option>
+                        </select>
+                      </div>
+                    </div>
+
+                    <div class="row">
+                      <div class="col-sm-3">
+                        <strong>Role:</strong>
+                      </div>
+                      <div class="col-sm-9">
+                        <span
+                          *ngIf="!editMode || i !== usuarioEnEdicion"
+                          class="ms-2"
+                          >{{ usuario.value.zrole }}</span
+                        >
+                        <select
+                          *ngIf="editMode && i === usuarioEnEdicion"
+                          [(ngModel)]="usuario.value.zrole"
+                          class="ms-2 form-select bg-black text-white border border-success"
+                        >
+                          <option value="superadmin">
+                            Super Administrador
+                          </option>
+                          <option value="admin">Administrador</option>
+                          <option value="editor">Editor</option>
+                          <option value="user">Usuario</option>
+                        </select>
+                      </div>
+                    </div>
+
+                    <div class="row">
+                      <div class="col-sm-3">
+                        <strong>Token:</strong>
+                      </div>
+                      <div class="col-sm-9">
+                        <span
+                          *ngIf="!editMode || i !== usuarioEnEdicion"
+                          class="ms-2"
+                          >{{ usuario.value.token }}</span
+                        >
+                        <input
+                          *ngIf="editMode && i === usuarioEnEdicion"
+                          [(ngModel)]="usuario.value.token"
+                          placeholder="New Token"
+                          class="ms-2 form-control bg-black text-white border border-success"
+                        />
+                      </div>
+                    </div>
+
+                    <div class="d-flex justify-content-end mt-3">
+                      <span
+                        *ngIf="!editMode || i !== usuarioEnEdicion"
+                        class="me-2 text-primary"
+                        (click)="activarEdicion(i)"
+                        style="cursor: pointer"
+                        ><i class="bi bi-pencil-square"></i
+                      ></span>
+                      <span
+                        *ngIf="!editMode || i !== usuarioEnEdicion"
+                        class="text-danger"
+                        (click)="eliminarUsuario(usuario.key)"
+                        style="cursor: pointer"
+                        ><i class="bi bi-x-square"></i
+                      ></span>
+                      <span
+                        class="edicion-usuario ms-2"
+                        *ngIf="editMode && i === usuarioEnEdicion"
+                        ><i
+                          class="bi bi-check-square text-success"
+                          (click)="guardarCambios(usuario)"
+                          style="cursor: pointer"
+                        ></i
+                      ></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <hr />
+              <!--artistas-->
+            </div>
+            <div class="text-center">
+              <h6>
+                <button
+                  class="btn btn-outline-success"
+                  (click)="openAddArtistForm()"
+                >
+                  Add New Artist
+                </button>
+              </h6>
+            </div>
+            <div *ngIf="showAddArtistForm">
+              <div class="user-box">
+                <form (ngSubmit)="saveNewArtist()" #newArtistForm="ngForm">
+                  <div class="form-group">
+                    <label>Artist Name:</label>
+                    <input
+                      type="text"
+                      [(ngModel)]="newArtist.artistName"
+                      name="artistName"
+                      class="ms-2 form-control bg-black text-white border border-danger"
+                      required
+                    />
+                    <!-- Mostrar mensaje de error si el campo es obligatorio y no está completo -->
+                    <div
+                      *ngIf="
+                        newArtistForm.controls['artistName'].invalid &&
+                        newArtistForm.controls['artistName'].touched
+                      "
+                    >
+                      Artist Name is required.
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label>Genre:</label>
+                    <input
+                      type="text"
+                      [(ngModel)]="newArtist.genre"
+                      name="genre"
+                      class="ms-2 form-control bg-black text-white border border-danger"
+                      required
+                    />
+                    <!-- Mostrar mensaje de error si el campo es obligatorio y no está completo -->
+                    <div
+                      *ngIf="
+                        newArtistForm.controls['genre'].invalid &&
+                        newArtistForm.controls['genre'].touched
+                      "
+                    >
+                      Genre is required.
+                    </div>
+                  </div>
+
+                  <div class="text-center m-2">
+                    <button
+                      type="submit"
+                      class="btn btn-outline-success m-2"
+                      [disabled]="newArtistForm.invalid"
+                    >
+                      Save
+                    </button>
+                    <button
+                      type="button"
+                      class="btn btn-outline-danger m-2"
+                      (click)="cancelAddArtist()"
+                    >
+                      Cancel
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Lado derecho (sidebar derecho)
+        <div class="col-md-2">
+          <div
+            class="p-3 rounded text-white"
+            style="background-color: #202020"
+          ></div>
+        </div> -->
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </body>
+</html>
